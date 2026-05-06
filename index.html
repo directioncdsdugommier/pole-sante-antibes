@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pôle Santé Antibes Centre — Médecin du Sport, Kinésithérapeutes & Ostéopathes à Antibes</title>
+<meta name="description" content="Centre de médecine du sport à Antibes (06600). Médecin du sport (Dr Jalliffier-Verne), médecin généraliste, chirurgien orthopédique du genou, kinésithérapeutes, ostéopathes, infirmières. Traumatologie sportive, certificats médicaux, rééducation sportive, équipements de pointe. RDV Doctolib.">
+<meta name="keywords" content="médecin du sport Antibes, médecin sportif Antibes, médecine du sport Antibes 06600, médecine sportive Côte d'Azur, traumatologie sportive Antibes, certificat médical sport Antibes, certificat aptitude sportive Antibes, Dr Jalliffier-Verne médecin sport, pôle santé Antibes, centre médical Antibes, kinésithérapeute Antibes, kiné du sport Antibes, ostéopathe sportif Antibes, chirurgien orthopédique genou Antibes, rééducation sportive Antibes, blessure sportive Antibes, entorse cheville Antibes, tendinite traitement Antibes, tendinopathie Antibes, déchirure musculaire Antibes, suivi sportif Antibes, médecin marathon Antibes, médecin trail Antibes, médecin tennis Antibes, médecin football Antibes, tractions robotisées Antibes, médecin sport ouvert samedi Antibes">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="author" content="Pôle Santé Antibes Centre">
+<meta name="geo.region" content="FR-06">
+<meta name="geo.placename" content="Antibes">
+<meta name="geo.position" content="43.5808;7.1239">
+<meta name="ICBM" content="43.5808, 7.1239">
+<meta name="medical:specialty" content="Sports Medicine, General Practice, Orthopedic Surgery, Physical Therapy, Osteopathy">
+<link rel="canonical" href="https://www.pole-sante-antibes.com/">
+<link rel="alternate" hreflang="fr-FR" href="https://www.pole-sante-antibes.com/">
+<link rel="alternate" hreflang="x-default" href="https://www.pole-sante-antibes.com/">
+
+<!-- ===== Optimisations de chargement (réduit le délai d'affichage des médias) ===== -->
+<!-- Préconnexions DNS+TLS pour ne pas attendre lors des appels Supabase -->
+<link rel="preconnect" href="https://omrzoztroammlganhfht.supabase.co" crossorigin>
+<link rel="dns-prefetch" href="https://omrzoztroammlganhfht.supabase.co">
+<!-- Préconnexion CDN scripts (React, Babel, Supabase) pour téléchargement plus rapide -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<!-- Préconnexion Imgur pour le logo Doctolib du bouton flottant -->
+<link rel="preconnect" href="https://i.imgur.com">
+<link rel="dns-prefetch" href="https://i.imgur.com">
+<!-- Preload des scripts JS critiques en parallèle (depuis le head, avant qu'ils ne soient demandés) -->
+<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js" crossorigin>
+<link rel="preload" as="script" href="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin>
+<link rel="preload" as="script" href="app.js?v=5">
+<!-- Preload du logo en deux temps :
+     - logo-256.png (6.5 KB, 4× moins de pixels que l'original) : haute priorité, utilisé par le boot loader
+     - logo.png : basse priorité, utilisé par le header/footer une fois le site chargé -->
+<link rel="preload" as="image" href="assets/logo-256.png" fetchpriority="high">
+<link rel="preload" as="image" href="assets/logo.png" fetchpriority="low">
+<!-- Preload des URLs médias critiques mises en cache au précédent chargement.
+     Au premier chargement, rien dans le cache → fonctionne normalement.
+     Au 2e chargement et suivants, les images/vidéo s'affichent quasi instantanément. -->
+<script>
+(function(){
+  try {
+    var cached = JSON.parse(localStorage.getItem('psa_media_cache') || '{}');
+    var head = document.head;
+    function preload(url, as, type) {
+      if (!url || typeof url !== 'string') return;
+      var l = document.createElement('link');
+      l.rel = 'preload'; l.as = as; l.href = url;
+      if (type) l.type = type;
+      l.setAttribute('fetchpriority', as === 'image' ? 'high' : 'low');
+      l.crossOrigin = 'anonymous';
+      head.appendChild(l);
+    }
+    if (cached.heroImage) preload(cached.heroImage, 'image');
+    if (cached.bannerVideoUrl) preload(cached.bannerVideoUrl, 'video', 'video/mp4');
+    // Photos médecins/kinés/infirmières
+    if (cached.photoUrls && Array.isArray(cached.photoUrls)) {
+      cached.photoUrls.slice(0, 12).forEach(function(u){ preload(u, 'image'); });
+    }
+  } catch(e) {}
+})();
+</script>
+<!-- =================================================================== -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Pôle Santé Antibes Centre">
+<meta property="og:title" content="Pôle Santé Antibes Centre — Médecin du Sport, Kinés & Ostéo à Antibes">
+<meta property="og:description" content="Centre de médecine du sport à Antibes : médecin du sport, traumatologie sportive, certificats médicaux, rééducation. RDV Doctolib.">
+<meta property="og:url" content="https://www.pole-sante-antibes.com/">
+<meta property="og:image" content="https://www.pole-sante-antibes.com/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pôle Santé Antibes Centre — Médecin du Sport à Antibes">
+<meta name="twitter:description" content="Centre de médecine du sport à Antibes. Médecin du sport, kinés, ostéos, chirurgien orthopédique.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MedicalClinic","MedicalBusiness","LocalBusiness"],
+      "@id": "https://www.pole-sante-antibes.com/#organization",
+      "name": "Pôle Santé Antibes Centre",
+      "alternateName": ["Pôle Santé Antibes","Centre Médical Antibes Centre"],
+      "url": "https://www.pole-sante-antibes.com/",
+      "logo": "https://www.pole-sante-antibes.com/assets/logo.png",
+      "image": "https://www.pole-sante-antibes.com/assets/logo.png",
+      "telephone": "+33422328810",
+      "email": "secretariat.polesanteantibes@gmail.com",
+      "priceRange": "€€",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "27 Boulevard Gustave Chancel",
+        "addressLocality": "Antibes",
+        "postalCode": "06600",
+        "addressRegion": "Alpes-Maritimes",
+        "addressCountry": "FR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 43.5808, "longitude": 7.1239 },
+      "areaServed": [
+        {"@type":"City","name":"Antibes"},
+        {"@type":"City","name":"Juan-les-Pins"},
+        {"@type":"City","name":"Vallauris"},
+        {"@type":"City","name":"Biot"},
+        {"@type":"City","name":"Cannes"},
+        {"@type":"City","name":"Cagnes-sur-Mer"},
+        {"@type":"AdministrativeArea","name":"Alpes-Maritimes"},
+        {"@type":"AdministrativeArea","name":"Côte d'Azur"}
+      ],
+      "openingHoursSpecification": [
+        {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"20:00"},
+        {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"18:00"}
+      ],
+      "medicalSpecialty": ["SportsMedicine","PhysicalTherapy","GeneralPractice","Orthopedic","Osteopathic"],
+      "availableService": [
+        {"@type":"MedicalProcedure","name":"Consultation de médecine du sport"},
+        {"@type":"MedicalProcedure","name":"Certificat médical d'aptitude sportive"},
+        {"@type":"MedicalProcedure","name":"Traumatologie sportive"},
+        {"@type":"MedicalProcedure","name":"Rééducation sportive"},
+        {"@type":"MedicalProcedure","name":"Rééducation post-opératoire"},
+        {"@type":"MedicalProcedure","name":"Chirurgie orthopédique du genou"},
+        {"@type":"MedicalProcedure","name":"Ostéopathie sportive"},
+        {"@type":"MedicalProcedure","name":"Tractions robotisées"},
+        {"@type":"MedicalProcedure","name":"Ondes de choc"},
+        {"@type":"MedicalProcedure","name":"Pressothérapie"}
+      ],
+      "sameAs": [
+        "https://www.instagram.com/polesante_antibes/",
+        "https://www.doctolib.fr/pole-de-sante/antibes/pole-sante-antibes-centre"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.pole-sante-antibes.com/#dr-jalliffier-verne",
+      "name": "Dr Jalliffier-Verne",
+      "jobTitle": "Médecin du Sport",
+      "medicalSpecialty": "SportsMedicine",
+      "worksFor": { "@id": "https://www.pole-sante-antibes.com/#organization" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "27 Boulevard Gustave Chancel",
+        "addressLocality": "Antibes",
+        "postalCode": "06600",
+        "addressCountry": "FR"
+      }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.pole-sante-antibes.com/#dr-aurora-toma",
+      "name": "Dr Aurora Toma",
+      "jobTitle": "Médecin Généraliste",
+      "medicalSpecialty": "GeneralPractice",
+      "worksFor": { "@id": "https://www.pole-sante-antibes.com/#organization" }
+    },
+    {
+      "@type": "Physician",
+      "@id": "https://www.pole-sante-antibes.com/#dr-tsiry-andriamananaivo",
+      "name": "Dr Tsiry Andriamananaivo",
+      "jobTitle": "Chirurgien Orthopédique du Genou",
+      "medicalSpecialty": "Orthopedic",
+      "worksFor": { "@id": "https://www.pole-sante-antibes.com/#organization" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.pole-sante-antibes.com/#website",
+      "url": "https://www.pole-sante-antibes.com/",
+      "name": "Pôle Santé Antibes Centre",
+      "publisher": { "@id": "https://www.pole-sante-antibes.com/#organization" },
+      "inLanguage": "fr-FR"
+    }
+  ]
+}
+</script>
+<script src="seo.js?v=3" defer></script>
+
+<!-- ===== Protection anti-copie ===== -->
+<!-- ⚠ Aucune protection web n'est infaillible (DevTools, capture d'écran...).
+     Ces mesures découragent toutefois la copie casual et le téléchargement direct des photos. -->
+<style>
+  /* Désactiver la sélection de texte et les interactions tactiles indésirables sur tout le site */
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;       /* iOS : pas de menu "Enregistrer l'image" sur appui long */
+    -webkit-tap-highlight-color: transparent;
+  }
+  /* Empêcher la sélection des images et le drag (sauver l'image en la glissant) */
+  img, picture, video {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: auto;
+    -webkit-touch-callout: none;
+  }
+  /* Exception : autoriser la sélection et la saisie dans les champs de formulaire */
+  input, textarea, select, [contenteditable="true"] {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+  }
+</style>
+<script>
+(function() {
+  'use strict';
+
+  // 1. Bloquer le clic droit (menu contextuel : Copier, Enregistrer l'image, Inspecter...)
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    return false;
+  }, true);
+
+  // 2. Bloquer le drag des images
+  document.addEventListener('dragstart', function(e) {
+    if (e.target && e.target.tagName === 'IMG') {
+      e.preventDefault();
+      return false;
+    }
+  }, true);
+
+  // 3. Bloquer les événements de copie / découpe
+  ['copy', 'cut'].forEach(function(evt) {
+    document.addEventListener(evt, function(e) {
+      // Permettre la copie depuis les champs de formulaire
+      var t = e.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+      e.preventDefault();
+      return false;
+    }, true);
+  });
+
+  // 4. Bloquer les raccourcis clavier sensibles
+  document.addEventListener('keydown', function(e) {
+    var t = e.target;
+    var inField = t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable);
+
+    // F12 — DevTools
+    if (e.keyCode === 123) { e.preventDefault(); return false; }
+
+    var ctrl = e.ctrlKey || e.metaKey; // metaKey = Cmd sur Mac
+
+    if (ctrl) {
+      // Ctrl+U : voir le code source
+      if (e.keyCode === 85) { e.preventDefault(); return false; }
+      // Ctrl+S : enregistrer la page
+      if (e.keyCode === 83) { e.preventDefault(); return false; }
+      // Ctrl+P : imprimer
+      if (e.keyCode === 80) { e.preventDefault(); return false; }
+      // Ctrl+A : sélectionner tout (sauf dans les champs)
+      if (e.keyCode === 65 && !inField) { e.preventDefault(); return false; }
+      // Ctrl+C / Ctrl+X (sauf dans les champs)
+      if ((e.keyCode === 67 || e.keyCode === 88) && !inField) { e.preventDefault(); return false; }
+
+      // Ctrl+Shift+I / Ctrl+Shift+J / Ctrl+Shift+C / Ctrl+Shift+K — DevTools (Chrome, Firefox)
+      if (e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67 || e.keyCode === 75)) {
+        e.preventDefault();
+        return false;
+      }
+    }
+  }, true);
+
+  // 5. Empêcher la sélection à la souris (par sécurité, en complément du CSS)
+  document.addEventListener('selectstart', function(e) {
+    var t = e.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    e.preventDefault();
+    return false;
+  }, true);
+
+  // 6. Si quelqu'un parvient à copier malgré tout, écraser le presse-papier
+  document.addEventListener('copy', function(e) {
+    var t = e.target;
+    if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.isContentEditable)) return;
+    if (e.clipboardData) {
+      e.clipboardData.setData('text/plain', '© Pôle Santé Antibes Centre — Reproduction interdite');
+      e.preventDefault();
+    }
+  }, true);
+})();
+</script>
+<!-- ===== Fin protection anti-copie ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Nunito', sans-serif; background: #fff; color: #4b4844; overflow-x: hidden; font-size: 17px; line-height: 1.65; }
+  button { font-family: inherit; }
+  input, select, textarea { font-family: inherit; }
+  img { max-width: 100%; }
+
+  /* ===== Responsive overrides ===== */
+  /* Tablet: ≤960px */
+  @media (max-width: 960px) {
+    .psa-header-nav { display: none !important; }
+    .psa-header-burger { display: inline-flex !important; }
+    .psa-header-cta { display: none !important; }
+
+    .psa-hero-section { padding: 0 !important; }
+    .psa-hero-inner { flex-direction: column !important; gap: 28px !important; padding: 14px 20px 22px 20px !important; }
+    .psa-hero-h1 { font-size: 42px !important; }
+    .psa-hero-cards { max-width: 100% !important; min-width: 0 !important; width: 100%; }
+
+    .psa-services-section { padding-top: 20px !important; }
+
+    .psa-grid-2 { grid-template-columns: 1fr !important; }
+    .psa-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+    .psa-grid-4 { grid-template-columns: repeat(2, 1fr) !important; }
+
+    .psa-section { padding-left: 20px !important; padding-right: 20px !important; }
+    .psa-section-pad { padding: 64px 20px !important; }
+
+    .psa-footer-top { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+
+    .psa-team-large { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+    .psa-team-small { grid-template-columns: repeat(3, 1fr) !important; gap: 12px !important; }
+
+    .psa-banner { aspect-ratio: 16/9 !important; }
+  }
+
+  /* Global text overflow safety on small screens */
+  @media (max-width: 600px) {
+    h1 { font-size: clamp(28px, 9vw, 44px) !important; line-height: 1.15 !important; }
+    h2 { font-size: clamp(26px, 7vw, 40px) !important; line-height: 1.2 !important; }
+    h3 { font-size: clamp(20px, 5vw, 26px) !important; }
+    section:not(.psa-video-section) { padding-left: 16px !important; padding-right: 16px !important; padding-top: 56px !important; padding-bottom: 56px !important; }
+    .psa-video-section { padding: 0 !important; margin: 0 !important; }
+    .psa-hero-section { padding-top: 0 !important; padding-bottom: 0 !important; }
+    .psa-hero-section .psa-hero-inner { padding-top: 8px !important; padding-bottom: 14px !important; }
+    .psa-services-section { padding-top: 12px !important; }
+    iframe { max-width: 100%; }
+  }
+
+  /* Mobile: ≤600px */
+  @media (max-width: 600px) {
+    .psa-hero-h1 { font-size: 34px !important; line-height: 1.15 !important; }
+    .psa-hero-desc { font-size: 15px !important; }
+    .psa-hero-eyebrow { font-size: 11px !important; }
+    .psa-hero-info { font-size: 11px !important; }
+
+    .psa-grid-3 { grid-template-columns: 1fr !important; }
+    .psa-grid-4 { grid-template-columns: 1fr !important; }
+
+    .psa-section-pad { padding: 48px 16px !important; }
+    .psa-section { padding-left: 16px !important; padding-right: 16px !important; }
+
+    .psa-footer-top { grid-template-columns: 1fr !important; gap: 24px !important; margin-bottom: 32px !important; }
+
+    .psa-team-large { grid-template-columns: 1fr !important; }
+    .psa-team-small { grid-template-columns: repeat(2, 1fr) !important; }
+    .psa-nurses-row { gap: 12px !important; justify-content: center !important; }
+    .psa-nurses-row .psa-nurse-card { width: calc(50% - 6px) !important; max-width: 200px !important; flex-shrink: 0 !important; }
+
+    .psa-h2 { font-size: 30px !important; }
+    .psa-h3 { font-size: 22px !important; }
+
+    .psa-cta-row { flex-direction: column !important; align-items: stretch !important; }
+    .psa-cta-row > * { width: 100% !important; justify-content: center !important; }
+
+    .psa-banner { aspect-ratio: 16/10 !important; max-height: 50vh !important; }
+
+    .psa-jobs-form { grid-template-columns: 1fr !important; }
+    .psa-contact-grid { grid-template-columns: 1fr !important; }
+
+    .psa-services-grid { grid-template-columns: 1fr !important; }
+
+    .psa-staff-grid { grid-template-columns: 1fr !important; }
+
+    .psa-equip-grid { grid-template-columns: 1fr !important; }
+
+    .psa-tabs { flex-wrap: wrap !important; }
+    .psa-tabs > button { flex: 1 1 calc(50% - 4px) !important; font-size: 12px !important; padding: 8px 6px !important; }
+
+    .psa-admin-panel { max-width: 100% !important; max-height: 95vh !important; }
+
+    .psa-logo-text { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Loader cinématique HORS de #root pour être isolé du rendu React.
+     Quand React monte dans #root, il ne touche pas au loader, donc l'animation
+     ne souffre pas du gros layout/paint provoqué par le mount initial. -->
+<div id="psa-boot-loader" class="psa-boot-loader">
+  <div class="psa-boot-bg" aria-hidden="true"></div>
+  <div class="psa-boot-frame">
+    <div class="psa-boot-stage">
+      <!-- Croix médicale dorée à l'épaisseur réelle du logo -->
+      <div class="psa-boot-cross" aria-hidden="true">
+        <span class="psa-boot-cross-arm psa-boot-cross-v"></span>
+        <span class="psa-boot-cross-arm psa-boot-cross-h"></span>
+      </div>
+      <!-- Logo réel — 256×256 (vs 498px original) pour décodage 4× plus rapide.
+           WebP avec fallback PNG. opacity:0.001 dès le départ pour pré-compositing GPU. -->
+      <picture class="psa-boot-logo-pic">
+        <source srcset="assets/logo-256.webp" type="image/webp">
+        <img src="assets/logo-256.png" alt="Pôle Santé Antibes Centre" class="psa-boot-logo" width="200" height="200" fetchpriority="high" decoding="async" />
+      </picture>
+    </div>
+    <div class="psa-boot-words">
+      <div class="psa-boot-name"><em>Pôle Santé</em></div>
+      <div class="psa-boot-divider" aria-hidden="true">
+        <span class="psa-boot-divider-line"></span>
+        <span class="psa-boot-divider-dot"></span>
+        <span class="psa-boot-divider-line"></span>
+      </div>
+      <div class="psa-boot-place">A&nbsp;N&nbsp;T&nbsp;I&nbsp;B&nbsp;E&nbsp;S&nbsp;&nbsp;&nbsp;C&nbsp;E&nbsp;N&nbsp;T&nbsp;R&nbsp;E</div>
+    </div>
+  </div>
+</div>
+
+<style>
+    /* Toutes les animations utilisent UNIQUEMENT opacity et transform pour rester sur le GPU.
+       Pas de mix-blend-mode, pas de filter animé, pas de background-clip animé. */
+
+    .psa-boot-loader {
+      position: fixed; inset: 0; z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      background: #faf8f4;
+      transition: opacity 0.6s ease-out;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      overflow: hidden;
+      /* Forcer un layer GPU dédié + isoler du reste du rendu (React notamment).
+         contain:strict empêche les changements de layout extérieurs d'affecter ce sous-arbre. */
+      transform: translateZ(0);
+      will-change: opacity;
+      contain: layout paint;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .psa-boot-loader.psa-boot-hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Fond — halo doré subtil en bas (statique, fade-in seulement) */
+    .psa-boot-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% 100%, rgba(202,158,63,0.16) 0%, rgba(202,158,63,0.04) 40%, transparent 70%);
+      opacity: 0;
+      animation: psaBootFadeIn 0.8s ease-out 0.1s forwards;
+      will-change: opacity;
+    }
+
+    .psa-boot-frame {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 28px;
+    }
+
+    /* === Stage du logo === */
+    .psa-boot-stage {
+      position: relative; width: 220px; height: 220px;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* Croix médicale dorée — épaisseur fidèle au logo (~36% de la largeur de la croix).
+       Croix = 60px de large, donc bras = 22px d'épaisseur.
+       margin-top: -28px pour aligner pile sur la position de la croix dans le logo
+       (mesurée précisément : la croix est à 27.7px au-dessus du centre du logo affiché à 200px).
+       z-index: 2 pour être AU-DESSUS du logo pendant le crossfade. */
+    .psa-boot-cross {
+      position: absolute; top: 50%; left: 50%;
+      width: 60px; height: 60px;
+      margin-top: -28px;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 2;
+      animation: psaBootCrossOut 0.35s ease-in 0.95s forwards;
+      will-change: opacity, transform;
+    }
+    .psa-boot-cross-arm {
+      position: absolute;
+      background: #ca9e3f;
+      border-radius: 1px;
+    }
+    .psa-boot-cross-v {
+      top: 0; left: 50%;
+      width: 22px;
+      transform: translateX(-50%) scaleY(0);
+      transform-origin: center;
+      height: 100%;
+      animation: psaBootCrossGrowV 0.55s cubic-bezier(0.65,0,0.35,1) 0.10s forwards;
+      will-change: transform;
+    }
+    .psa-boot-cross-h {
+      top: 50%; left: 0;
+      height: 22px;
+      width: 100%;
+      transform: translateY(-50%) scaleX(0);
+      transform-origin: center;
+      animation: psaBootCrossGrowH 0.55s cubic-bezier(0.65,0,0.35,1) 0.40s forwards;
+      will-change: transform;
+    }
+    @keyframes psaBootCrossGrowV {
+      from { transform: translateX(-50%) scaleY(0); }
+      to   { transform: translateX(-50%) scaleY(1); }
+    }
+    @keyframes psaBootCrossGrowH {
+      from { transform: translateY(-50%) scaleX(0); }
+      to   { transform: translateY(-50%) scaleX(1); }
+    }
+    @keyframes psaBootCrossOut {
+      from { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+      to   { opacity: 0; transform: translate(-50%,-50%) scale(0.9); }
+    }
+
+    /* Logo réel — apparition en simple fade-in (pas de scale qui forcerait un repaint
+       au moment critique du décodage). Le breathing très subtil prend le relais après. */
+    /* Logo réel — opacité 0.001 dès le début (techniquement visible donc décodé et
+       composité immédiatement par le GPU avant que l'animation démarre). L'animation
+       passe juste de 0.001 à 1, aucun nouveau travail GPU/paint requis au fade-in. */
+    .psa-boot-logo {
+      width: 200px; height: auto; display: block;
+      opacity: 0.001;
+      transform: translateZ(0);
+      animation: psaBootLogoIn 0.6s ease-out 1.05s forwards,
+                 psaBootBreath 5s ease-in-out 2.0s infinite;
+      will-change: opacity, transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .psa-boot-logo-pic { display: contents; }
+    @keyframes psaBootLogoIn {
+      0%   { opacity: 0.001; }
+      100% { opacity: 1; }
+    }
+    @keyframes psaBootBreath {
+      0%, 100% { transform: translateZ(0) scale(1); }
+      50%      { transform: translateZ(0) scale(1.015); }
+    }
+
+    /* === Texte === */
+    .psa-boot-words {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 14px;
+    }
+
+    /* "Pôle Santé" en italique vert — pas de gradient animé (trop cher).
+       Couleur unie + simple fade + slight slide. */
+    .psa-boot-name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 30px;
+      color: #134524;
+      line-height: 1;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: psaBootFadeUp 0.8s ease-out 1.65s forwards;
+      will-change: opacity, transform;
+    }
+    .psa-boot-name em {
+      font-style: italic;
+      font-weight: 400;
+    }
+    @keyframes psaBootFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Divider — petite ligne or — point or — petite ligne or */
+    .psa-boot-divider {
+      display: flex; align-items: center; gap: 10px;
+      opacity: 0;
+      transform: scale(0.85);
+      animation: psaBootDividerIn 0.7s ease-out 1.95s forwards;
+      will-change: opacity, transform;
+    }
+    .psa-boot-divider-line {
+      display: block; width: 26px; height: 1px;
+      background: linear-gradient(90deg, transparent, #ca9e3f);
+    }
+    .psa-boot-divider-line:last-child {
+      background: linear-gradient(90deg, #ca9e3f, transparent);
+    }
+    .psa-boot-divider-dot {
+      display: block; width: 4px; height: 4px;
+      background: #ca9e3f; border-radius: 50%;
+    }
+    @keyframes psaBootDividerIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* "ANTIBES CENTRE" */
+    .psa-boot-place {
+      font-family: 'Nunito', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #ca9e3f;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(4px);
+      animation: psaBootPlaceIn 0.7s ease-out 2.15s forwards;
+      will-change: opacity, transform;
+    }
+    @keyframes psaBootPlaceIn {
+      to { opacity: 0.9; transform: translateY(0); }
+    }
+
+    /* Animation générique fade-in (utilisée par bg) */
+    @keyframes psaBootFadeIn { to { opacity: 1; } }
+
+    /* Préférences d'accessibilité — animations réduites */
+    @media (prefers-reduced-motion: reduce) {
+      .psa-boot-bg,
+      .psa-boot-cross,
+      .psa-boot-cross-arm,
+      .psa-boot-logo,
+      .psa-boot-name,
+      .psa-boot-divider,
+      .psa-boot-place {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .psa-boot-cross { display: none; }
+    }
+
+    /* Petits écrans */
+    @media (max-width: 480px) {
+      .psa-boot-stage { width: 180px; height: 180px; }
+      .psa-boot-logo { width: 170px; }
+      .psa-boot-cross { width: 51px; height: 51px; margin-top: -24px; }
+      .psa-boot-cross-v { width: 18px; }
+      .psa-boot-cross-h { height: 18px; }
+      .psa-boot-name { font-size: 26px; }
+      .psa-boot-place { font-size: 9px; letter-spacing: 0.16em; }
+      .psa-boot-frame { gap: 22px; }
+    }
+  </style>
+
+<div id="root"></div>
+
+<!-- Bouton flottant Doctolib : toujours visible (hors React).
+     Apparaît une fois le loader masqué pour ne pas perturber l'animation de boot.
+     Source: https://imgur.com/7kADowD (avec fallback local en cas d'indisponibilité). -->
+<a id="psa-doctolib-fab"
+   href="https://www.doctolib.fr/pole-de-sante/antibes/pole-sante-antibes-centre"
+   target="_blank"
+   rel="noopener"
+   aria-label="Prendre rendez-vous sur Doctolib"
+   title="Prendre rendez-vous sur Doctolib">
+  <img src="https://i.imgur.com/7kADowD.png"
+       alt=""
+       width="56"
+       height="56"
+       onerror="this.onerror=null;this.src='assets/doctolib.svg'" />
+</a>
+
+<style>
+  #psa-doctolib-fab {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 500;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(15,64,33,0.22), 0 1px 4px rgba(15,64,33,0.12);
+    transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, opacity 0.4s ease-out;
+    -webkit-tap-highlight-color: transparent;
+    /* Caché tant que le loader est affiché */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+  }
+  #psa-doctolib-fab.psa-fab-show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+  #psa-doctolib-fab:hover {
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 6px 22px rgba(15,64,33,0.28), 0 2px 6px rgba(15,64,33,0.14);
+  }
+  #psa-doctolib-fab:active {
+    transform: translateY(0) scale(1);
+  }
+  #psa-doctolib-fab img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  @media (max-width: 600px) {
+    #psa-doctolib-fab {
+      bottom: 18px;
+      right: 18px;
+      width: 52px;
+      height: 52px;
+    }
+  }
+</style>
+
+<script>
+  // Cache le loader UNIQUEMENT quand TOUT est prêt :
+  // 1. React a monté (mutation détectée dans #root)
+  // 2. Les polices web sont chargées (sinon le texte clignote en swap FOUT)
+  // 3. Le layout s'est stabilisé (2 frames suspendues)
+  // 4. Un délai minimum est passé pour que la chorégraphie se joue jusqu'au bout
+  (function(){
+    var loader = document.getElementById('psa-boot-loader');
+    if (!loader) return;
+    var startTime = Date.now();
+    var hidden = false;
+
+    function actuallyHide() {
+      if (hidden) return;
+      hidden = true;
+      if (!loader || !loader.parentNode) return;
+      loader.classList.add('psa-boot-hide');
+      // Faire apparaître le bouton Doctolib en même temps que le loader fade out
+      var fab = document.getElementById('psa-doctolib-fab');
+      if (fab) fab.classList.add('psa-fab-show');
+      setTimeout(function(){
+        if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+      }, 600);
+    }
+
+    // Étape 1 : signaler que React a monté
+    var reactMounted = false;
+    function onReactMounted() {
+      if (reactMounted) return;
+      reactMounted = true;
+      tryHide();
+    }
+
+    // Étape 2 : tenter de cacher quand TOUT est prêt
+    function tryHide() {
+      if (!reactMounted) return;
+      // Attendre que les fonts soient chargées (si supporté)
+      var fontsReady = document.fonts && document.fonts.ready
+        ? document.fonts.ready
+        : Promise.resolve();
+      fontsReady.then(function(){
+        // Attendre minimum 2000ms depuis le début pour la chorégraphie
+        var elapsed = Date.now() - startTime;
+        var minDisplay = 2000;
+        var delay = Math.max(0, minDisplay - elapsed);
+        setTimeout(function(){
+          // Attendre 2 frames pour que le layout se soit complètement stabilisé
+          requestAnimationFrame(function(){
+            requestAnimationFrame(function(){
+              actuallyHide();
+            });
+          });
+        }, delay);
+      });
+    }
+
+    // Observer le mount React
+    var root = document.getElementById('root');
+    if (root && window.MutationObserver) {
+      var obs = new MutationObserver(function(muts){
+        for (var i = 0; i < muts.length; i++) {
+          if (muts[i].addedNodes && muts[i].addedNodes.length > 0) {
+            obs.disconnect();
+            onReactMounted();
+            return;
+          }
+        }
+      });
+      obs.observe(root, { childList: true });
+    }
+
+    // Fallback : si rien ne se passe en 7s, cacher quand même
+    setTimeout(function(){ reactMounted = true; actuallyHide(); }, 7000);
+  })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+<script src="config.js" defer></script>
+<script src="supabase-client.js" defer></script>
+<script src="store.js?v=2" defer></script>
+
+<script src="Header.js?v=7" defer></script>
+<script src="Hero.js?v=2" defer></script>
+<script src="Services.js?v=4" defer></script>
+<script src="Team.js?v=4" defer></script>
+<script src="Jobs.js?v=3" defer></script>
+<script src="Contact.js?v=2" defer></script>
+<script src="Footer.js?v=3" defer></script>
+
+<script src="app.js?v=5" defer></script>
+</body>
+</html>
